@@ -1,58 +1,92 @@
 # Diabetes Prediction Using Random Forest Classifier
 
-## Overview
+**Diabetector** is a machine learning-based application designed to predict the likelihood of diabetes in an individual using medical diagnostic data. It employs a Random Forest Classifier to analyze key health indicators and classify whether a person is likely to be diabetic or not.
 
-This project aims to predict whether an individual is diabetic or not based on health-related features using a **Random Forest Classifier**. The model is trained on a dataset containing various medical attributes such as glucose level, BMI, insulin, and age. The project also includes a real-time prediction tool where users can input personal health metrics and receive a diabetes risk prediction.
+## 🧠 How It Works
 
-## Technologies Used
-- **Python** (3.6+)
-- **Libraries:**
-  - `pandas` for data manipulation
-  - `numpy` for numerical operations
-  - `matplotlib` & `seaborn` for data visualization
-  - `sklearn` for machine learning algorithms
-- **Random Forest Classifier** for model training
+1. **Data Ingestion**: The application reads the diabetes dataset (`diabetes.csv`) containing various medical features such as glucose level, BMI, insulin, age, etc.
 
-## Dataset
-The dataset used in this project contains health-related information about patients, such as:
-- Pregnancies
-- Glucose levels
-- Blood Pressure (BP)
-- Skin Thickness
-- Insulin levels
-- BMI
-- Diabetes Pedigree Function (DPF)
-- Age
-- Outcome (1 = Diabetic, 0 = Non-Diabetic)
+2. **Preprocessing**:
 
-You can download the dataset from the [Kaggle Pima Indians Diabetes Database](https://www.kaggle.com/uciml/pima-indians-diabetes-database) or use the provided `diabetes.csv` file in this repository.
+   * Cleans missing or zero values in key features.
+   * Normalizes and structures the data for model training.
 
+3. **Model Training**:
 
-## Usage
+   * Uses a **Random Forest Classifier** from `scikit-learn`.
+   * The dataset is split into training and test sets (typically 80/20).
+   * The model is trained to distinguish patterns between diabetic and non-diabetic individuals.
 
-1. **Run the Code:**
-   You can execute the script by running:
-   ```bash
-   python diabetes_prediction.py
-   ```
+4. **Prediction**:
 
-2. **Real-Time Predictions:**
-   After training, the script will prompt you to enter health information (e.g., glucose level, BMI, etc.) for real-time diabetes prediction.
+   * The user inputs health parameters through the command line.
+   * The model returns a binary result: either **Diabetic** or **Non-Diabetic**.
 
-3. **Visualization:**
-   The script generates multiple visualizations:
-   - A **Heatmap** to show correlations between the dataset features.
-   - **Pie Chart** and **Bar Graph** to show the distribution of diabetic and non-diabetic individuals in the dataset.
+5. **Visualization**:
 
-## Model Evaluation
+   * Optional graphs show feature importance and data distribution using `matplotlib` and `seaborn`.
 
-The model achieved an accuracy of **X%** on the test data. The performance of the Random Forest Classifier was evaluated using standard metrics like accuracy, precision, and recall.
+## 🚀 Features
 
-Key steps in the model pipeline:
-- **Data Preprocessing:** Handling missing/zero values and feature renaming.
-- **Train-Test Split:** 70% of the data used for training and 30% for testing.
-- **Model Training:** Random Forest Classifier was used with default parameters.
-- **Accuracy Evaluation:** The model accuracy was computed using the test set.
+* Clean and structured dataset processing
+* Accurate predictions using ensemble learning
+* Simple user interface for entering health data
+* Modular, beginner-friendly Python code
+* Extensible for GUI or web deployment
+
+## 🛠️ Technologies Used
+
+| Tool         | Purpose                          |
+| ------------ | -------------------------------- |
+| Python       | Core language                    |
+| Pandas       | Data manipulation                |
+| NumPy        | Numerical operations             |
+| Scikit-learn | Machine learning (Random Forest) |
+| Matplotlib   | Data visualization               |
+| Seaborn      | Statistical plotting             |
+
+## 📦 Installation
+
+# Clone the repo
+git clone https://github.com/NishantMishra31/Diabetector.git
+cd Diabetector
+
+# (Optional) Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r Requirements.txt
+
+## ▶️ Running the Application
+
+python "Diabetes Predicition System.py"
+
+* You’ll be prompted to input values such as:
+
+  * Glucose level
+  * BMI (Body Mass Index)
+  * Age
+  * Insulin level
+  * Skin thickness, Blood pressure, etc.
+
+* The program will then output a prediction.
+
+## 📁 Dataset
+
+The dataset used is based on the **Pima Indians Diabetes Database**. It includes 768 rows and 9 columns of data on women of Pima Indian heritage aged 21 and older.
+
+| Feature                  | Description                       |
+| ------------------------ | --------------------------------- |
+| Pregnancies              | Number of times pregnant          |
+| Glucose                  | Plasma glucose concentration      |
+| BloodPressure            | Diastolic blood pressure (mm Hg)  |
+| SkinThickness            | Triceps skin fold thickness (mm)  |
+| Insulin                  | 2-Hour serum insulin (mu U/ml)    |
+| BMI                      | Body mass index (weight in kg/m²) |
+| DiabetesPedigreeFunction | Genetic propensity                |
+| Age                      | Age in years                      |
+| Outcome                  | 1 if diabetic, 0 otherwise        |
 
 ## Future Improvements
 
@@ -69,3 +103,8 @@ If you want to contribute to this project, feel free to submit issues or pull re
 3. Make your changes and commit them: `git commit -m 'Add feature'`
 4. Push to the branch: `git push origin feature-branch-name`
 5. Open a pull request.
+
+## 🙏 Acknowledgments
+
+* The creators of the Pima Indians Diabetes Dataset
+* The open-source community for libraries and support
