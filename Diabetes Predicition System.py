@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 
 data = pd.read_csv("./diabetes.csv")
+
 print(data.head(10))
 
 print(f"Shape of the data: {data.shape}")
@@ -24,10 +25,8 @@ plt.figure(figsize=(10, 10))
 sns.heatmap(data[top_corr_features].corr(), annot=True, cmap="RdYlGn")
 plt.show()
 
-
 for column in ['Glucose', 'BP', 'SkinThickness', 'Insulin', 'BMI', 'DPF', 'Age']:
     print(f"Number of zeros in {column} : {data[data[column]==0].shape[0]}")
-
 
 data['Glucose'] = data['Glucose'].replace(0, data['Glucose'].mean())
 data['BP'] = data['BP'].replace(0, data['BP'].mean())
@@ -37,10 +36,8 @@ data['BMI'] = data['BMI'].replace(0, data['BMI'].mean())
 data['DPF'] = data['DPF'].replace(0, data['DPF'].mean())
 data['Age'] = data['Age'].replace(0, data['Age'].mean())
 
-
 for column in ['Glucose', 'BP', 'SkinThickness', 'Insulin', 'BMI', 'DPF', 'Age']:
     print(f"Number of zeros in {column} after replacement: {data[data[column]==0].shape[0]}")
-
 
 positive_outcome = len(data.loc[data["Outcome"]==1])
 negative_outcome = len(data.loc[data["Outcome"]==0])
