@@ -1,7 +1,7 @@
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+import pandas as pd    # For data manipulation and analysis
+import numpy as np    # For numerical computations
+import matplotlib.pyplot as plt    # For plotting graphs
+import seaborn as sns    # For statistical data visualization
 from sklearn.ensemble import RandomForestClassifier 
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
