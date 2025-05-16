@@ -97,5 +97,6 @@ def prediction_calculator(n):
         else:
             print("NON-DIABETIC PERSON :)")
 
+# Now, rompt user for number of people to predict and call the prediction function
 no_of_people = int(input("\n ENTER NUMBER OF PEOPLE : "))
 prediction_calculator(no_of_people)
