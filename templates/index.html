@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h2>Diabetes Prediction Tool</h2>
+        <h3>Enter your details and get your diagnosis!</h3>
+        <form id="predictForm">
+          <label>Pregnancies:</label>
+          <input type="number" name="Pregnancies" required />
+
+          <label>Glucose:</label>
+          <input type="number" name="Glucose" required />
+
+          <label>Blood Pressure (BP):</label>
+          <input type="number" name="BP" required />
+
+          <label>Skin Thickness:</label>
+          <input type="number" name="SkinThickness" required />
+
+          <label>Insulin:</label>
+          <input type="number" name="Insulin" required />
+
+          <label>BMI:</label>
+          <input type="number" step="any" name="BMI" required />
+
+          <label>Diabetes Pedigree Function (DPF):</label>
+          <input type="number" step="any" name="DPF" required />
+
+          <label>Age:</label>
+          <input type="number" name="Age" required />
+
+          <button type="submit">Predict</button>
+        </form>
+      </div>
+
+      <div class="output">
+        <div id="result">Your result will appear here</div>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("predictForm");
+      const resultBox = document.getElementById("result");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = parseFloat(value);
+        });
+
+        const response = await fetch(
+          "https://diabetector.onrender.com/predict",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          }
+        );
+
+        const result = await response.json();
+        resultBox.className = ""; // reset
+
+        if (result.prediction === "Diabetic") {
+          resultBox.innerText =
+            " Warning⚠️ \n You are Diabetic. \n 🚨Consult a doctor immediately! ";
+          resultBox.classList.add("result-diabetic");
+        } else if (result.prediction === "Non-Diabetic") {
+          resultBox.innerText =
+            "Congrats 🎉 \n You are Non-Diabetic \n Let's keep it that way ✅";
+          resultBox.classList.add("result-nondiabetic");
+        } else {
+          resultBox.innerText = `Error: ${result.error}`;
+        }
+      });
+    </script>
+  </body>
+</html>
