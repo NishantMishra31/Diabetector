@@ -1,6 +1,6 @@
-pandas
+flask
+flask-cors
 numpy
+pandas
 scikit-learn
-matplotlib
-seaborn
 joblib

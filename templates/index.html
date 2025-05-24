@@ -7,6 +7,11 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='favicon.png') }}"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -15,28 +20,60 @@
         <h3>Enter your details and get your diagnosis!</h3>
         <form id="predictForm">
           <label>Pregnancies:</label>
-          <input type="number" name="Pregnancies" required />
+          <input
+            placeholder="e.g., 2"
+            type="number"
+            name="Pregnancies"
+            required
+          />
 
           <label>Glucose:</label>
-          <input type="number" name="Glucose" required />
+          <input
+            placeholder="e.g., 120"
+            type="number"
+            name="Glucose"
+            required
+          />
 
           <label>Blood Pressure (BP):</label>
-          <input type="number" name="BP" required />
+          <input placeholder="e.g., 80" type="number" name="BP" required />
 
           <label>Skin Thickness:</label>
-          <input type="number" name="SkinThickness" required />
+          <input
+            placeholder="e.g., 45"
+            type="number"
+            name="SkinThickness"
+            required
+          />
 
           <label>Insulin:</label>
-          <input type="number" name="Insulin" required />
+          <input
+            placeholder="e.g., 130"
+            type="number"
+            name="Insulin"
+            required
+          />
 
           <label>BMI:</label>
-          <input type="number" step="any" name="BMI" required />
+          <input
+            placeholder="e.g., 28.5"
+            type="number"
+            step="any"
+            name="BMI"
+            required
+          />
 
           <label>Diabetes Pedigree Function (DPF):</label>
-          <input type="number" step="any" name="DPF" required />
+          <input
+            placeholder="e.g., 0.45"
+            type="number"
+            step="any"
+            name="DPF"
+            required
+          />
 
           <label>Age:</label>
-          <input type="number" name="Age" required />
+          <input placeholder="e.g., 45" type="number" name="Age" required />
 
           <button type="submit">Predict</button>
         </form>
