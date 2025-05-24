@@ -10,6 +10,7 @@ body {
 
 .wrapper {
   display: flex;
+  flex-direction: row; /* default for desktop */
   max-width: 1200px;
   width: 100%;
   height: 730px;
@@ -20,8 +21,8 @@ body {
 }
 
 .container {
-  width: 55%; /* adjusted slightly */
-  padding: 15px 20px; /* reduced padding */
+  width: 55%;
+  padding: 15px 20px;
   background-color: #fff;
   border-right: 1px solid #f48fb1;
 }
@@ -32,7 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px; 
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   padding: 15px;
@@ -141,5 +142,43 @@ button:hover {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* 🔁 Responsive Layout for Vertical Screens */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .container,
+  .output {
+    align-self: center;
+    width: 97%;
+    border-right: none;
+    border-top: 1px solid #f48fb1;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  input {
+    align-self: center;
+    width: 97%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  form {
+    align-self: center;
+    width: 97%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .output {
+    font-size: 24px;
+    text-align: center;
   }
 }
