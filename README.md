@@ -66,7 +66,6 @@ diabetector/
 │   ├── style.css        # UI styles
 │   └── script.js        # Form logic and prediction fetch
 
-````
 
 ## 🚀 Getting Started Locally
 
@@ -74,7 +73,7 @@ diabetector/
    ```bash
    git clone https://github.com/nishantmishra31/diabetector.git
    cd diabetector
-````
+   ```
 
 2. **Install Requirements**
 
@@ -89,9 +88,10 @@ diabetector/
    ```
 
 4. **Open in Browser**
-   Navigate to `http://127.0.0.1:5000` and start predicting!
 
-````
+  ```bash
+   Navigate to `http://127.0.0.1:5000` and start predicting!
+  ```
 
 ## 🌐 Live App
 
