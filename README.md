@@ -70,11 +70,12 @@ diabetector/
 ## 🚀 Getting Started Locally
 
 1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/nishantmishra31/diabetector.git
    cd diabetector
    ```
-
+   
 2. **Install Requirements**
 
    ```bash
@@ -88,10 +89,11 @@ diabetector/
    ```
 
 4. **Open in Browser**
-
-  ```bash
+ 
+   ```bash
    Navigate to `http://127.0.0.1:5000` and start predicting!
-  ```
+   ```
+  
 
 ## 🌐 Live App
 
