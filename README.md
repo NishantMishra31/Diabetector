@@ -1,135 +1,125 @@
+# 🩺 Diabetector — Instant Diabetes Risk Prediction Web App
 
-# 🩺 Diabetector — Instant Diabetes Risk Prediction Web App powered by Machine Learning
+**Diabetector** is an end-to-end machine learning-powered web application that helps users assess their diabetes risk instantly by entering key clinical indicators. It blends data science, healthcare, and responsive web development into a simple, informative, and mobile-friendly tool.
 
-**Diabetector** is a machine learning-powered web application that allows users to instantly assess their risk of diabetes based on real clinical health indicators. Built using Python, Flask, and a Random Forest model, it delivers fast, accessible predictions in a clean, responsive interface.
-
-🚀 [Live App](https://diabetector.onrender.com) • 🧠 [Source Code](https://github.com/nishantmishra31/diabetector)
+🚀 [Live App](https://diabetector.onrender.com) • 🧠 [Codebase](https://github.com/nishantmishra31/diabetector)
 
 ## 🧩 Features
 
 - **Real-Time Prediction**  
-  Enter real health data and receive an immediate diabetic/non-diabetic risk assessment.
+  Enter real health data and receive an immediate diagnosis: *Diabetic* or *Non-Diabetic*.
 
 - **ML Model Powered by Real Dataset**  
-  Trained on the **PIMA Indian Diabetes Dataset**, a trusted dataset in the medical and ML community.
+  Trained on the [PIMA Indian Diabetes Dataset](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database), using a Random Forest Classifier.
 
 - **Clean & Responsive UI**  
-  Built with HTML and CSS to ensure a seamless experience across desktop and mobile devices.
+  Works seamlessly across desktop and mobile devices with real-time animations and scroll behavior.
 
-- **Full-Stack Integration**  
-  Flask handles both the backend prediction logic and frontend routing in a single service.
+- **Interactive Tooltips**  
+  Info icons next to each field explain medical terms in simple language (fully mobile-compatible).
 
-- **Fully Deployed on Render**  
-  Publicly available and cloud-hosted with a free-tier deployment setup.
+- **Analytics Integrated**  
+  Google Analytics tracks site traffic and interaction to measure engagement.
 
----
+- **One-Click Deploy with Render**  
+  Publicly hosted Flask app with complete frontend-backend integration.
 
-## 📊 Input Parameters
+## 🧠 Input Parameters
 
-The app takes the following medical inputs:
-
-| Parameter         | Description                                 |
-|------------------|---------------------------------------------|
-| Pregnancies       | Number of pregnancies                       |
-| Glucose           | Plasma glucose concentration                |
-| Blood Pressure    | Diastolic blood pressure (mm Hg)            |
-| Skin Thickness    | Triceps skinfold thickness (mm)             |
-| Insulin           | 2-Hour serum insulin (mu U/ml)              |
-| BMI               | Body mass index (kg/m²)                     |
-| Diabetes Pedigree Function | Genetic diabetes likelihood factor |
-| Age               | Age in years                                |
-
----
-
-## 🧠 ML Model Details
-
-- **Algorithm**: Random Forest Classifier
-- **Dataset**: [PIMA Indian Diabetes Dataset](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
-- **Library Stack**:
-  - `scikit-learn`
-  - `numpy`
-  - `joblib`
-
----
+| Parameter         | Description                                  |
+|------------------|----------------------------------------------|
+| **Pregnancies**   | Number of times the user has been pregnant   |
+| **Glucose**       | Plasma glucose concentration (mg/dL)         |
+| **Blood Pressure**| Diastolic blood pressure (mm Hg)             |
+| **Skin Thickness**| Triceps skinfold thickness (mm)              |
+| **Insulin**       | 2-hour serum insulin (mu U/ml)               |
+| **BMI**           | Body Mass Index (kg/m²)                      |
+| **DPF**           | Diabetes Pedigree Function (genetic risk)    |
+| **Age**           | Age in years                                 |
 
 ## 🛠️ Tech Stack
 
-| Layer        | Technology           |
-|--------------|----------------------|
-| Frontend     | HTML, CSS            |
-| Backend      | Python, Flask        |
-| ML           | scikit-learn, joblib |
-| Deployment   | Render               |
-
----
-
-## 🚀 Getting Started Locally
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/nishantmishra31/diabetector.git
-cd diabetector
-````
-
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the App
-
-```bash
-python app.py
-```
-
-Then open `http://127.0.0.1:5000` in your browser.
-
----
+| Layer        | Technologies              |
+|--------------|---------------------------|
+| **Frontend** | HTML, CSS, JS (with tooltips and responsive layout) |
+| **Backend**  | Python, Flask             |
+| **ML Model** | Random Forest (scikit-learn) |
+| **Deployment** | Render (free tier)      |
+| **Analytics** | Google Analytics         |
 
 ## 📁 Project Structure
 
 ```
+
 diabetector/
 │
-├── app.py                  # Flask app and routes
-├── model.pkl               # Trained Random Forest model
-├── train_model.py          # Script to train the model
-├── diabetes.csv            # Dataset used
-├── requirements.txt        # Project dependencies
+├── app.py               # Flask app and routes
+├── model.pkl            # Trained ML model
+├── train\_model.py       # Model training script
+├── diabetes.csv         # Dataset (PIMA)
+├── requirements.txt     # Dependencies
 │
 ├── templates/
-│   └── index.html          # Frontend UI
+│   └── index.html       # Frontend HTML
 │
 ├── static/
-│   └── style.css           # Stylesheet
-│   └── favicon.ico         # Optional browser icon
-```
+│   ├── style.css        # UI styles
+│   └── script.js        # Form logic and prediction fetch
 
----
+````
 
-## 🌐 Deployment Notes
+## 🚀 Getting Started Locally
 
-* This app is hosted on [Render](https://render.com) with both the frontend and backend in a single web service.
-* Free-tier deployments may take \~10 seconds to wake up.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/nishantmishra31/diabetector.git
+   cd diabetector
+````
+
+2. **Install Requirements**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Flask App**
+
+   ```bash
+   python app.py
+   ```
+
+4. **Open in Browser**
+   Navigate to `http://127.0.0.1:5000` and start predicting!
+
+## 🌐 Live App
+
+> 🧪 Deployed at: [https://diabetector.onrender.com](https://diabetector.onrender.com)
+> *(Allow a few seconds for it to wake up if using Render free tier)*
 
 ## 📈 Analytics
 
-Google Analytics is integrated to track user traffic and usage patterns. Events like form submissions are recorded for insights.
+Google Analytics is integrated to track:
 
-## 🙌 Acknowledgements
+* Page views
+* Form submission events
+* User engagement
 
-* Dataset: [Kaggle - PIMA Indian Diabetes Dataset](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
-* Flask, scikit-learn, Render, and the open-source community
+## ✨ Credits
+
+* **Dataset**: [PIMA Indian Diabetes Dataset](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
+* **Developer**: [Nishant Mishra](https://linkedin.com/in/nishantmishra31)
+* **Tools**: Flask, scikit-learn, HTML, CSS, Render, GitHub
 
 ## 🤝 Contributing
 
-Pull requests and feature suggestions are welcome! Feel free to fork the repo and make it even better.
+Suggestions, issues, and pull requests are welcome!
+If you’d like to collaborate, feel free to connect via [LinkedIn](https://linkedin.com/in/nishant-mishra-) or email to mnishant.work@gmail.com
 
-## ✨ Author
+## 🌟 Show Your Support
 
-**Nishant Mishra**
-Connect with me on [LinkedIn](https://linkedin.com/in/nishant-mishra-)
+If you found this project helpful, give it a ⭐ on GitHub — and feel free to share it!
+
+## Author- Nishant Mishra (NishantMishra31)
 
 © 2025 Nishant Mishra. All rights reserved.
 
