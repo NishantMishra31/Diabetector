@@ -56,7 +56,7 @@ The app takes the following medical inputs:
 
 | Layer        | Technology           |
 |--------------|----------------------|
-| Frontend     | HTML, CSS, JS        |
+| Frontend     | HTML, CSS            |
 | Backend      | Python, Flask        |
 | ML           | scikit-learn, joblib |
 | Deployment   | Render               |
