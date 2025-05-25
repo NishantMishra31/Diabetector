@@ -1,4 +1,4 @@
-# 🩺 Diabetector — Instant Diabetes Risk Prediction Web App
+# 🩺 Diabetector — Instant Diabetes Risk Prediction Web App Powered by Machine Learning
 
 **Diabetector** is an end-to-end machine learning-powered web application that helps users assess their diabetes risk instantly by entering key clinical indicators. It blends data science, healthcare, and responsive web development into a simple, informative, and mobile-friendly tool.
 
@@ -100,7 +100,7 @@ diabetector/
 ## 🌐 Live App
 
 > 🧪 Deployed at: [https://diabetector.onrender.com](https://diabetector.onrender.com)
-> *(Allow a few seconds for it to wake up if using Render free tier)*
+> *(Allow a few seconds for it to wake up as it is hosted on free tier service)*
 
 ## 📈 Analytics
 
@@ -113,7 +113,7 @@ Google Analytics is integrated to track:
 ## ✨ Credits
 
 * **Dataset**: [PIMA Indian Diabetes Dataset](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
-* **Developer**: [Nishant Mishra](https://linkedin.com/in/nishantmishra31)
+* **Developer**: [Nishant Mishra](https://linkedin.com/in/nishant-mishra-)
 * **Tools**: Flask, scikit-learn, HTML, CSS, Render, GitHub
 
 ## 🤝 Contributing
@@ -128,5 +128,3 @@ If you found this project helpful, give it a ⭐ on GitHub — and feel free to 
 ## Author- Nishant Mishra (NishantMishra31)
 
 © 2025 Nishant Mishra. All rights reserved.
-
-
