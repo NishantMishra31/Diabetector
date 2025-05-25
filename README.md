@@ -66,6 +66,8 @@ diabetector/
 │   ├── style.css        # UI styles
 │   └── script.js        # Form logic and prediction fetch
 
+```
+
 
 ## 🚀 Getting Started Locally
 
@@ -75,7 +77,7 @@ diabetector/
    git clone https://github.com/nishantmishra31/diabetector.git
    cd diabetector
    ```
-   
+
 2. **Install Requirements**
 
    ```bash
