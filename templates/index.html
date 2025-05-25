@@ -13,8 +13,6 @@
       type="image/x-icon"
       href="{{ url_for('static', filename='favicon.png') }}"
     />
-
-    <!-- ✅ Google Analytics should be inside <head> -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-Z25MR89WNZ"
@@ -27,25 +25,11 @@
       gtag("js", new Date());
       gtag("config", "G-Z25MR89WNZ");
     </script>
-    <meta charset="UTF-8" />
-    <title>Diabetes Prediction</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{{ url_for('static', filename='favicon.png') }}"
-    />
   </head>
   <body>
     <header class="masthead">
       <div class="masthead-content">
-        <div class="masthead-left">
-          <h1>Diabetector</h1>
-        </div>
+        <div class="masthead-left"><h1>Diabetector</h1></div>
         <div class="masthead-right">
           <p>© 2025 <strong>Nishant Mishra</strong></p>
           <div class="contact-links">
@@ -70,26 +54,29 @@
         <form id="predictForm">
           <label
             >Pregnancies:
-            <span class="info-wrapper">
-              ?
+            <span class="info-wrapper"
+              >?
               <span class="custom-tooltip"
-                >Number of times you've been pregnant
-              </span>
-            </span>
-          </label>
+                >Number of times you've been pregnant</span
+              ></span
+            ></label
+          >
           <input
             placeholder="e.g., 2"
             type="number"
             name="Pregnancies"
             required
           />
-          <label>
-            Glucose:
-            <span class="info-wrapper">
-              ?
-              <span class="custom-tooltip">Blood sugar level (mg/dL)</span>
-            </span>
-          </label>
+
+          <label
+            >Glucose:
+            <span class="info-wrapper"
+              >?
+              <span class="custom-tooltip"
+                >Blood sugar level (mg/dL)</span
+              ></span
+            ></label
+          >
           <input
             placeholder="e.g., 120"
             type="number"
@@ -98,22 +85,24 @@
           />
 
           <label
-            >Blood Pressure (BP):<span class="info-wrapper">
-              ?
+            >Blood Pressure (BP):
+            <span class="info-wrapper"
+              >?
               <span class="custom-tooltip"
                 >Diastolic blood pressure (mm Hg)</span
-              >
-            </span></label
+              ></span
+            ></label
           >
           <input placeholder="e.g., 80" type="number" name="BP" required />
 
           <label
-            >Skin Thickness:<span class="info-wrapper">
-              ?
+            >Skin Thickness:
+            <span class="info-wrapper"
+              >?
               <span class="custom-tooltip"
                 >Thickness of fat under the skin (in mm)</span
-              >
-            </span></label
+              ></span
+            ></label
           >
           <input
             placeholder="e.g., 45"
@@ -123,12 +112,13 @@
           />
 
           <label
-            >Insulin level:<span class="info-wrapper">
-              ?
+            >Insulin level:
+            <span class="info-wrapper"
+              >?
               <span class="custom-tooltip"
                 >2-hour serum insulin level (mu U/ml)</span
-              >
-            </span></label
+              ></span
+            ></label
           >
           <input
             placeholder="e.g., 130"
@@ -138,10 +128,11 @@
           />
 
           <label
-            >BMI measure:<span class="info-wrapper">
-              ?
-              <span class="custom-tooltip">Body Mass Index (kg/m²)</span>
-            </span></label
+            >BMI measure:
+            <span class="info-wrapper"
+              >?
+              <span class="custom-tooltip">Body Mass Index (kg/m²)</span></span
+            ></label
           >
           <input
             placeholder="e.g., 28.5"
@@ -152,12 +143,13 @@
           />
 
           <label
-            >Diabetes Pedigree Function (DPF):<span class="info-wrapper">
-              ?
+            >Diabetes Pedigree Function (DPF):
+            <span class="info-wrapper"
+              >?
               <span class="custom-tooltip"
                 >Genetic likelihood of Diabetes in family history</span
-              >
-            </span></label
+              ></span
+            ></label
           >
           <input
             placeholder="e.g., 0.45"
@@ -168,10 +160,10 @@
           />
 
           <label
-            >Age:<span class="info-wrapper">
-              ?
-              <span class="custom-tooltip">Age in years</span>
-            </span></label
+            >Age:
+            <span class="info-wrapper"
+              >? <span class="custom-tooltip">Age in years</span></span
+            ></label
           >
           <input placeholder="e.g., 45" type="number" name="Age" required />
 
@@ -189,7 +181,6 @@
     <script>
       const form = document.getElementById("predictForm");
       const resultBox = document.getElementById("result");
-
       form.addEventListener("submit", async function (e) {
         e.preventDefault();
         const formData = new FormData(form);
@@ -197,16 +188,13 @@
         formData.forEach((value, key) => {
           data[key] = parseFloat(value);
         });
-
         const response = await fetch("/predict", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
         });
-
         const result = await response.json();
-        resultBox.className = ""; // reset
-
+        resultBox.className = "";
         if (result.prediction === "Diabetic") {
           resultBox.innerText =
             " Warning⚠️ \n You are likely Diabetic. \n 🚨Consult a doctor immediately! ";
