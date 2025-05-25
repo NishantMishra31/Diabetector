@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-Z25MR89WNZ"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-Z25MR89WNZ");
+  </script>
   <head>
     <meta charset="UTF-8" />
     <title>Diabetes Prediction</title>
@@ -76,7 +90,9 @@
           <label>Age:</label>
           <input placeholder="e.g., 45" type="number" name="Age" required />
 
-          <button type="submit">Predict</button>
+          <button type="submit" onclick="gtag('event', 'predict_click');">
+            Predict
+          </button>
         </form>
       </div>
 
