@@ -108,11 +108,11 @@
 
         if (result.prediction === "Diabetic") {
           resultBox.innerText =
-            " Warning⚠️ \n You are Diabetic. \n 🚨Consult a doctor immediately! ";
+            " Warning⚠️ \n You are likely Diabetic. \n 🚨Consult a doctor immediately! ";
           resultBox.classList.add("result-diabetic");
         } else if (result.prediction === "Non-Diabetic") {
           resultBox.innerText =
-            "Congrats 🎉 \n You are Non-Diabetic \n Let's keep it that way ✅";
+            "Hurray!🎉 \n You are likely Non-Diabetic \n Let's keep it that way ✅";
           resultBox.classList.add("result-nondiabetic");
         } else {
           resultBox.innerText = `Error: ${result.error}`;
