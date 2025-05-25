@@ -1,5 +1,5 @@
 
-# 🩺 Diabetector — Instant Diabetes Risk Prediction Web App
+# 🩺 Diabetector — Instant Diabetes Risk Prediction Web App powered by Machine Learning
 
 **Diabetector** is a machine learning-powered web application that allows users to instantly assess their risk of diabetes based on real clinical health indicators. Built using Python, Flask, and a Random Forest model, it delivers fast, accessible predictions in a clean, responsive interface.
 
