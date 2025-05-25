@@ -15,7 +15,10 @@
     />
 
     <!-- ✅ Google Analytics should be inside <head> -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z25MR89WNZ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z25MR89WNZ"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -24,8 +27,6 @@
       gtag("js", new Date());
       gtag("config", "G-Z25MR89WNZ");
     </script>
-  </head>
-
     <meta charset="UTF-8" />
     <title>Diabetes Prediction</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,37 +41,50 @@
     />
   </head>
   <body>
-  <header class="masthead">
-  <div class="masthead-content">
-    <div class="masthead-left">
-      <h1>Diabetector</h1>
-    </div>
-    <div class="masthead-right">
-      <p>© 2025 <strong>Nishant Mishra</strong></p>
-      <div class="contact-links">
-        <a href="https://linkedin.com/in/nishant-mishra-" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/nishantmishra31" target="_blank">GitHub</a> |
-        <a href="mailto:mnishant.work@gmail.com">Email</a>
+    <header class="masthead">
+      <div class="masthead-content">
+        <div class="masthead-left">
+          <h1>Diabetector</h1>
+        </div>
+        <div class="masthead-right">
+          <p>© 2025 <strong>Nishant Mishra</strong></p>
+          <div class="contact-links">
+            <a href="https://linkedin.com/in/nishant-mishra-" target="_blank"
+              >LinkedIn</a
+            >
+            |
+            <a href="https://github.com/nishantmishra31" target="_blank"
+              >GitHub</a
+            >
+            |
+            <a href="mailto:mnishant.work@gmail.com">Email</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
 
-
-  <div class="wrapper">
-    <div class="container">
-      <h2>Diabetes Prediction Tool</h2>
-      <h3>Enter your details and get your diagnosis!</h3>
-      <form id="predictForm">
-
-          <label>Pregnancies:</label>
+    <div class="wrapper">
+      <div class="container">
+        <h2>Diabetes Prediction Tool</h2>
+        <h3>Enter your details and get your diagnosis!</h3>
+        <form id="predictForm">
+          <label
+            >Pregnancies:<span
+              class="info-icon"
+              title="Number of times you've been pregnant"
+              >?</span
+            ></label
+          >
           <input
             placeholder="e.g., 2"
             type="number"
             name="Pregnancies"
             required
           />
-          <label>Glucose:</label>
+          <label>
+            Glucose:
+            <span class="info-icon" title="Blood sugar level (mg/dL)">?</span>
+          </label>
           <input
             placeholder="e.g., 120"
             type="number"
@@ -78,10 +92,22 @@
             required
           />
 
-          <label>Blood Pressure (BP):</label>
+          <label
+            >Blood Pressure (BP):<span
+              class="info-icon"
+              title="Diastolic blood pressure (mm Hg)"
+              >?</span
+            ></label
+          >
           <input placeholder="e.g., 80" type="number" name="BP" required />
 
-          <label>Skin Thickness:</label>
+          <label
+            >Skin Thickness:<span
+              class="info-icon"
+              title="Thickness of fat under the tricep skin (in mm)"
+              >?</span
+            ></label
+          >
           <input
             placeholder="e.g., 45"
             type="number"
@@ -89,7 +115,13 @@
             required
           />
 
-          <label>Insulin:</label>
+          <label
+            >Insulin:<span
+              class="info-icon"
+              title="	2-hour serum insulin level (mu U/ml)"
+              >?</span
+            ></label
+          >
           <input
             placeholder="e.g., 130"
             type="number"
@@ -97,7 +129,11 @@
             required
           />
 
-          <label>BMI:</label>
+          <label
+            >BMI:<span class="info-icon" title="Body Mass Index (kg/m²)"
+              >?</span
+            ></label
+          >
           <input
             placeholder="e.g., 28.5"
             type="number"
@@ -106,7 +142,13 @@
             required
           />
 
-          <label>Diabetes Pedigree Function (DPF):</label>
+          <label
+            >Diabetes Pedigree Function (DPF):<span
+              class="info-icon"
+              title="Genetic risk score based on family history"
+              >?</span
+            ></label
+          >
           <input
             placeholder="e.g., 0.45"
             type="number"
@@ -115,7 +157,9 @@
             required
           />
 
-          <label>Age:</label>
+          <label
+            >Age:<span class="info-icon" title="Age in years">?</span></label
+          >
           <input placeholder="e.g., 45" type="number" name="Age" required />
 
           <button type="submit" onclick="gtag('event', 'predict_click');">

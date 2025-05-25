@@ -142,6 +142,21 @@ input {
   transition: border-color 0.3s;
 }
 
+.info-icon {
+  margin-left: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black; /* 🔴 red color */
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.info-icon:hover {
+  color: #b71c1c; /* darker red on hover */
+}
+
 button {
   width: 100%;
   margin-top: 25px;
