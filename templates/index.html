@@ -69,12 +69,14 @@
         <h3>Enter your details and get your diagnosis!</h3>
         <form id="predictForm">
           <label
-            >Pregnancies:<span
-              class="info-icon"
-              title="Number of times you've been pregnant"
-              >?</span
-            ></label
-          >
+            >Pregnancies:
+            <span class="info-wrapper">
+              ?
+              <span class="custom-tooltip"
+                >Number of times you've been pregnant
+              </span>
+            </span>
+          </label>
           <input
             placeholder="e.g., 2"
             type="number"
@@ -83,7 +85,10 @@
           />
           <label>
             Glucose:
-            <span class="info-icon" title="Blood sugar level (mg/dL)">?</span>
+            <span class="info-wrapper">
+              ?
+              <span class="custom-tooltip">Blood sugar level (mg/dL)</span>
+            </span>
           </label>
           <input
             placeholder="e.g., 120"
@@ -93,20 +98,22 @@
           />
 
           <label
-            >Blood Pressure (BP):<span
-              class="info-icon"
-              title="Diastolic blood pressure (mm Hg)"
-              >?</span
-            ></label
+            >Blood Pressure (BP):<span class="info-wrapper">
+              ?
+              <span class="custom-tooltip"
+                >Diastolic blood pressure (mm Hg)</span
+              >
+            </span></label
           >
           <input placeholder="e.g., 80" type="number" name="BP" required />
 
           <label
-            >Skin Thickness:<span
-              class="info-icon"
-              title="Thickness of fat under the tricep skin (in mm)"
-              >?</span
-            ></label
+            >Skin Thickness:<span class="info-wrapper">
+              ?
+              <span class="custom-tooltip"
+                >Thickness of fat under the skin (in mm)</span
+              >
+            </span></label
           >
           <input
             placeholder="e.g., 45"
@@ -116,11 +123,12 @@
           />
 
           <label
-            >Insulin:<span
-              class="info-icon"
-              title="	2-hour serum insulin level (mu U/ml)"
-              >?</span
-            ></label
+            >Insulin level:<span class="info-wrapper">
+              ?
+              <span class="custom-tooltip"
+                >2-hour serum insulin level (mu U/ml)</span
+              >
+            </span></label
           >
           <input
             placeholder="e.g., 130"
@@ -130,9 +138,10 @@
           />
 
           <label
-            >BMI:<span class="info-icon" title="Body Mass Index (kg/m²)"
-              >?</span
-            ></label
+            >BMI measure:<span class="info-wrapper">
+              ?
+              <span class="custom-tooltip">Body Mass Index (kg/m²)</span>
+            </span></label
           >
           <input
             placeholder="e.g., 28.5"
@@ -143,11 +152,12 @@
           />
 
           <label
-            >Diabetes Pedigree Function (DPF):<span
-              class="info-icon"
-              title="Genetic risk score based on family history"
-              >?</span
-            ></label
+            >Diabetes Pedigree Function (DPF):<span class="info-wrapper">
+              ?
+              <span class="custom-tooltip"
+                >Genetic likhelihood of Diabetes in family history</span
+              >
+            </span></label
           >
           <input
             placeholder="e.g., 0.45"
@@ -158,7 +168,10 @@
           />
 
           <label
-            >Age:<span class="info-icon" title="Age in years">?</span></label
+            >Age:<span class="info-wrapper">
+              ?
+              <span class="custom-tooltip">Age in years</span>
+            </span></label
           >
           <input placeholder="e.g., 45" type="number" name="Age" required />
 
