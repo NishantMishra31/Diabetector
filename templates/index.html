@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Z25MR89WNZ"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-Z25MR89WNZ");
-  </script>
   <head>
+    <meta charset="UTF-8" />
+    <title>Diabetes Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='favicon.png') }}"
+    />
+
+    <!-- ✅ Google Analytics should be inside <head> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z25MR89WNZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Z25MR89WNZ");
+    </script>
+  </head>
+
     <meta charset="UTF-8" />
     <title>Diabetes Prediction</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
