@@ -97,14 +97,11 @@
           data[key] = parseFloat(value);
         });
 
-        const response = await fetch(
-          "https://diabetector.onrender.com/predict",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-          }
-        );
+        const response = await fetch("/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
 
         const result = await response.json();
         resultBox.className = ""; // reset
@@ -120,6 +117,9 @@
         } else {
           resultBox.innerText = `Error: ${result.error}`;
         }
+        setTimeout(() => {
+          resultBox.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 100);
       });
     </script>
   </body>

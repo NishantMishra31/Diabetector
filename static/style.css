@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -152,14 +152,25 @@ button:hover {
     height: auto;
   }
 
-  .container,
-  .output {
+  .container {
     align-self: center;
     width: 97%;
     border-right: none;
     border-top: 1px solid #f48fb1;
     padding: 20px;
     box-sizing: border-box;
+  }
+
+  .output {
+    font-size: 30px;
+    padding: 35px;
+    margin-bottom: 50px;
+    min-height: 220px;
+    animation: fadeInZoom 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    border-radius: 12px;
+    text-align: center;
+    align-self: center;
   }
 
   input {
@@ -176,9 +187,14 @@ button:hover {
     max-width: 500px;
     margin: 0 auto;
   }
-
-  .output {
-    font-size: 24px;
-    text-align: center;
+}
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
