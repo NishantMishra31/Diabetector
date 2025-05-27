@@ -28,9 +28,9 @@ print("Model saved to model.pkl")
 
 def predict_diabetes(input_data):
     """
-    input_data: list or array in the order:
+    here input_data is given in form of a list or array in the order:
         [Pregnancies, Glucose, BP, SkinThickness, Insulin, BMI, DPF, Age]
-    returns: 0 or 1
+    which returns: 0 or 1 predicting the diabetes
     """
     input_np = np.array(input_data).reshape(1, -1)
     return model.predict(input_np)[0]
