@@ -3,7 +3,7 @@ import numpy as np    # for numerical computations
 import matplotlib.pyplot as plt    # for plotting graphs
 import seaborn as sns    # for statistical data visualization
 from sklearn.ensemble import RandomForestClassifier # for importing ml algos
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split # splits the dataset for training and testing 
 from sklearn import metrics
 
 data = pd.read_csv("./diabetes.csv")

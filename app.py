@@ -5,12 +5,11 @@ import os
 
 app = Flask(__name__)
 
-# Load model
-model = joblib.load('model.pkl')
+model = joblib.load('model.pkl') # this loads the model using joblib
 
 @app.route("/")
 def home():
-    return render_template("index.html")  # Renders index.html from /templates
+    return render_template("index.html") # flask renders html file here
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -34,5 +33,5 @@ def predict():
         return jsonify({"error": str(e)})
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # fallback to 5000 for local dev
+    port = int(os.environ.get("PORT", 5000))  # this is done for local run
     app.run(host="0.0.0.0", port=port, debug=True)
